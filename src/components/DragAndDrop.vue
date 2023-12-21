@@ -8,7 +8,14 @@ const items = ref([
   { fullname: 'first', age: 20, age: 20, age: 20, age: 20, age: 20 },
   { fullname: 'second', age: 20, age: 20, age: 20, age: 20, age: 20 },
   { fullname: 'third', age: 20, age: 20, age: 20, age: 20, age: 20 },
-  { fullname: 'fourth', age: 2000000000000000, age: 2000000000000000, age: 20, age: 20, age: 2000000000000000 }
+  {
+    fullname: 'fourth',
+    age: 2000000000000000,
+    age: 2000000000000000,
+    age: 20,
+    age: 20,
+    age: 2000000000000000
+  }
 ])
 
 const onDragStart = (e) => {
@@ -30,6 +37,7 @@ const onDragend = (e) => {
 const header = ['TO DO', 'IN PROGRESS', 'QA READY', 'QA', 'RELEASE READY', 'DONE']
 </script>
 <template>
+  <p>Drag and drop list view</p>
   <table style="width: 100%">
     <tr>
       <th v-for="(title, index) in header" :key="index">{{ title }}</th>
@@ -59,6 +67,6 @@ td {
   border: 1px solid black;
   text-align: center;
   padding: 10px 10px;
-  max-width: 100px;
+  width: 400px;
 }
 </style>

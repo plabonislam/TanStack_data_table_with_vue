@@ -10,9 +10,3 @@ import DragAndDrop from './components/DragAndDrop.vue'
   </header>
 </template>
 
-<style scoped>
-
-
-
-
-</style>
