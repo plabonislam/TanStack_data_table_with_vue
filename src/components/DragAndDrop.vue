@@ -38,6 +38,7 @@ const header = ['TO DO', 'IN PROGRESS', 'QA READY', 'QA', 'RELEASE READY', 'DONE
 </script>
 <template>
   <p>Drag and drop list view</p>
+  <button disabled="true" class="bar" draggable="true">btn</button>
   <table style="width: 100%">
     <tr>
       <th v-for="(title, index) in header" :key="index">{{ title }}</th>
@@ -47,6 +48,7 @@ const header = ['TO DO', 'IN PROGRESS', 'QA READY', 'QA', 'RELEASE READY', 'DONE
       :key="index"
       :id="index"
       draggable="true"
+      disabled="true"
       @dragstart="onDragStart"
       @dragenter="onDragEnter"
       @dragend="onDragend"
@@ -68,5 +70,10 @@ td {
   text-align: center;
   padding: 10px 10px;
   width: 400px;
+}
+
+td:draggable {
+  opacity: 0.5;
+  background: red;
 }
 </style>
